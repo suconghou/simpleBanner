@@ -12,6 +12,7 @@
 		{
 			dots:null,
 			speed:500,
+			easing:'swing',
 			arrows:false,
 			autoPlay:true,
 			autoPlayDuration:5000,
@@ -76,12 +77,31 @@
 
 		function play(current)
 		{
-			$ul.css({'margin-left':'-'+current+'00%'}).data('active',current);
+			animation.play(current);
 			if(cfg.dots)
 			{
 				$ol.find('li').eq(current).addClass('active').siblings().removeClass('active');
 			}
 		}
+		var defaultAnimate=function(current)
+		{
+			$ul.css({'margin-left':'-'+current+'00%'}).data('active',current);
+		};
+		var animation=
+		{
+			fade:function(current)
+			{
+				$ul.find('li').eq(current).find('img').hide().fadeIn(cfg.speed);
+				$ul.css({'margin-left':'-'+current+'00%'}).data('active',current);
+			},
+			slide:function(current)
+			{
+				$ul.animate({'margin-left':'-'+current+'00%'},cfg.speed,cfg.easing).data('active',current);
+			},
+			change:defaultAnimate
+		};
+		animation.play=animation[options.animation]?animation[options.animation]:defaultAnimate;
+
 
 
 		if(cfg.autoPlay)

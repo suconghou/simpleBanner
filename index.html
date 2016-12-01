@@ -4,8 +4,15 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<style type="text/css">
+
+		/* css reset */
+
 		html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;-webkit-font-smoothing:antialiased}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{height:auto}input[type="search"]{-webkit-appearance:textfield;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:bold}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}
 		input,button,select,textarea{outline:none}textarea{resize:none}a{text-decoration:none;color:#000}ul{padding-left:0;list-style:none;}
+
+		html{
+			background: #f1f1f1;
+		}
 
 		/*style for container*/
 		.wrapper-1{
@@ -112,6 +119,58 @@
 		}
 
 
+		/* for example 3*/
+
+		.wrapper-3{
+			width: 100%;
+			margin: 100px auto 400px;
+		}
+
+
+		.example-3{
+			overflow: hidden;
+			width: 100%;
+			position: relative;
+		}
+		.example-3 ul{
+			overflow: hidden;
+			margin: 0;
+			zoom: 1;
+		}
+		.example-3 ul li{
+			float: left;
+		}
+		.example-3 ul li img{
+			width: 100%;
+		}
+
+
+		.dots-3{
+			position: absolute;
+			bottom: 20px;
+			left: 50%;
+			width: 300px;
+			margin: 0 0 0 -150px;
+			padding: 0;
+			text-align: center;
+
+		}
+		.dots-3 li{
+			display: inline-block;
+			*display: inline;
+			*zoom: 1;
+			width: 15px;
+			height: 15px;
+			margin: 0 5px;
+			border-radius: 50%;
+			background: #fff;
+			cursor: pointer;
+		}
+		.dots-3 li:hover,.dots-3 li.active{
+			background: #ff7f02;
+		}
+
+
 
 
 	</style>
@@ -139,9 +198,18 @@
 		</div>
 	</div>
 
-	<div class="wrapper example-3">
-
+	<div class="wrapper-3">
+		<div class="example-3">
+			<ul>
+				<li><img src="http://i.niupic.com/images/2016/11/30/9M5Bnv.jpg" alt=""></li>
+				<li><img src="http://i.niupic.com/images/2016/11/30/RGwq7a.jpg" alt=""></li>
+				<li><img src="http://i.niupic.com/images/2016/11/30/Z0HXrA.jpg" alt=""></li>
+				<li><img src="http://i.niupic.com/images/2016/11/30/T5h9l1.jpg" alt=""></li>
+			</ul>
+		</div>
 	</div>
+
+
 	<div class="wrapper example-4">
 
 	</div>
@@ -156,14 +224,25 @@
 	{
 		autoPlayDuration:2000,
 		dots:'dots-1',
-		eventType:'mouseenter'
+		eventType:'mouseenter',
 	});
 
 	$('.example-2').simpleBanner(
 	{
 		autoPlayDuration:5000,
-		dots:'dots-2'
+		dots:'dots-2',
+		animation:'slide'
 	});
+
+	$('.example-3').simpleBanner(
+	{
+		autoPlayDuration:5000,
+		dots:'dots-3',
+		eventType:'mouseenter',
+		animation:'fade'
+	});
+
+
 
 </script>
 </body>
