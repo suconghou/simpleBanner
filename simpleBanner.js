@@ -42,8 +42,11 @@
 			{
 				var $_this=$(this);
 				var current=$_this.index();
-				play(current);
-				index=current;
+				if(index!=current)
+				{
+					play(current);
+					index=current;
+				}
 			});
 		}
 
