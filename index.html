@@ -16,12 +16,9 @@
 
 		/*style for container*/
 		.wrapper-1{
-			width: 800px;
+			width: 600px;
 			margin: 100px auto 400px;
 		}
-
-
-
 
 		/*style for img in case of low download speed*/
 		.example-1{
@@ -36,13 +33,19 @@
 		}
 		.example-1 ul li{
 			float: left;
+			height: 100%;
+			display: none;
+		}
+		.example-1 ul li:first-child{
+			display: block;
 		}
 		.example-1 ul li img{
 			width: 100%;
+			height: 100%;
 		}
+		
 
 		/*style for dots*/
-
 		.dots-1{
 			position: absolute;
 			bottom: 10px;
@@ -66,7 +69,6 @@
 		}
 
 
-
 		.wrapper-2{
 			width: 900px;
 			margin: 100px auto 400px;
@@ -87,9 +89,15 @@
 		}
 		.example-2 ul li{
 			float: left;
+			height: 100%;
+			display: none;
+		}
+		.example-1 ul li:first-child{
+			display: block;
 		}
 		.example-2 ul li img{
 			width: 100%;
+			height: 100%;
 		}
 
 
@@ -139,9 +147,15 @@
 		}
 		.example-3 ul li{
 			float: left;
+			height: 100%;
+			display: none;
+		}
+		.example-3 ul li:first-child{
+			display: block;
 		}
 		.example-3 ul li img{
 			width: 100%;
+			height: 100%;
 		}
 
 
@@ -170,6 +184,85 @@
 			background: #ff7f02;
 		}
 
+		/* for example 4*/
+		.wrapper-4{
+			width: 900px;
+			margin: 100px auto 400px;
+		}
+
+		.example-4{
+			overflow: hidden;
+			width: 100%;
+			position: relative;
+		}
+		.example-4 ul{
+			overflow: hidden;
+			margin: 0;
+			zoom: 1;
+		}
+		.example-4 ul li{
+			float: left;
+			position: relative;
+			display: none;
+		}
+		/* add dispaly:none above fix low print */
+		.example-4 ul li:first-child{
+			display: block;
+		}
+		/* end fix low print */
+
+		.example-4 ul li img{
+			width: 100%;
+			display: block;
+		}
+
+		/* for example 4 dot */
+		.dots-4{
+			position: absolute;
+			top: 20px;
+			left: 20px;
+			width: 300px;
+			margin: 0;
+			padding: 0;
+		}
+		.dots-4 li{
+			display: inline-block;
+			*display: inline;
+			*zoom: 1;
+			width: 10px;
+			height: 10px;
+			margin: 0 5px;
+			border-radius: 50%;
+			background: #fff;
+			cursor: pointer;
+		}
+		.dots-4 li:hover,.dots-4 li.active{
+			background: #ff7f02;
+		}
+
+		/* for example 4 text content */
+		.example-4-text{
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+		.example-4-text .mytext{
+			position: absolute;
+			top: 160px;
+			left: 30px;
+			bottom: 20px;
+			color: #ff7f02;
+			font-size: 26px;
+			width: 200px;
+			height: 100px;
+		}
+
+		
+
+
+		.wrapper-5{
+			display: none;
+		}
 
 
 
@@ -179,10 +272,11 @@
 	<div class="wrapper-1">
 		<div class="example-1">
 			<ul>
-				<li><img src="http://i.niupic.com/images/2016/11/30/9M5Bnv.jpg" alt=""></li>
-				<li><img src="http://i.niupic.com/images/2016/11/30/RGwq7a.jpg" alt=""></li>
-				<li><img src="http://i.niupic.com/images/2016/11/30/Z0HXrA.jpg" alt=""></li>
-				<li><img src="http://i.niupic.com/images/2016/11/30/T5h9l1.jpg" alt=""></li>
+				<li><img src="http://www.jq22.com/demo/jQuerySwipeslider201708162304/img/summer_beach.jpg" alt=""></li>
+				<li><img src="http://www.jq22.com/demo/jQuerySwipeslider201708162304/img/lang_yie_ar_kung_fu.jpg" alt=""></li>
+				<li><img src="http://www.jq22.com/demo/jQuerySwipeslider201708162304/img/tiny_vacation.jpg" alt=""></li>
+				<li><img src="http://www.jq22.com/demo/jQuerySwipeslider201708162304/img/borderlands_tiny_tina.jpg" alt=""></li>
+				<li><img src="http://www.jq22.com/demo/jQuerySwipeslider201708162304/img/redhead.jpg" alt=""></li>
 			</ul>
 		</div>
 	</div>
@@ -190,10 +284,11 @@
 	<div class="wrapper-2">
 		<div class="wrapper example-2">
 			<ul>
-				<li><img src="http://i.niupic.com/images/2016/11/30/9M5Bnv.jpg" alt=""></li>
-				<li><img src="http://i.niupic.com/images/2016/11/30/RGwq7a.jpg" alt=""></li>
-				<li><img src="http://i.niupic.com/images/2016/11/30/Z0HXrA.jpg" alt=""></li>
-				<li><img src="http://i.niupic.com/images/2016/11/30/T5h9l1.jpg" alt=""></li>
+				<li><img src="http://www.jq22.com/demo/jQuerySwipeslider201708162304/img/summer_beach.jpg" alt=""></li>
+				<li><img src="http://www.jq22.com/demo/jQuerySwipeslider201708162304/img/lang_yie_ar_kung_fu.jpg" alt=""></li>
+				<li><img src="http://www.jq22.com/demo/jQuerySwipeslider201708162304/img/tiny_vacation.jpg" alt=""></li>
+				<li><img src="http://www.jq22.com/demo/jQuerySwipeslider201708162304/img/borderlands_tiny_tina.jpg" alt=""></li>
+				<li><img src="http://www.jq22.com/demo/jQuerySwipeslider201708162304/img/redhead.jpg" alt=""></li>
 			</ul>
 		</div>
 	</div>
@@ -201,20 +296,69 @@
 	<div class="wrapper-3">
 		<div class="example-3">
 			<ul>
-				<li><img src="http://i.niupic.com/images/2016/11/30/9M5Bnv.jpg" alt=""></li>
-				<li><img src="http://i.niupic.com/images/2016/11/30/RGwq7a.jpg" alt=""></li>
-				<li><img src="http://i.niupic.com/images/2016/11/30/Z0HXrA.jpg" alt=""></li>
-				<li><img src="http://i.niupic.com/images/2016/11/30/T5h9l1.jpg" alt=""></li>
+				<li><img src="http://www.jq22.com/demo/jQuerySwipeslider201708162304/img/summer_beach.jpg" alt=""></li>
+				<li><img src="http://www.jq22.com/demo/jQuerySwipeslider201708162304/img/lang_yie_ar_kung_fu.jpg" alt=""></li>
+				<li><img src="http://www.jq22.com/demo/jQuerySwipeslider201708162304/img/tiny_vacation.jpg" alt=""></li>
+				<li><img src="http://www.jq22.com/demo/jQuerySwipeslider201708162304/img/borderlands_tiny_tina.jpg" alt=""></li>
+				<li><img src="http://www.jq22.com/demo/jQuerySwipeslider201708162304/img/redhead.jpg" alt=""></li>
 			</ul>
 		</div>
 	</div>
 
 
-	<div class="wrapper example-4">
+	<div class="wrapper-4">
+		<div class="example-4">
+			<ul>
+				<li>
+					<img src="http://www.jq22.com/demo/jQuerySwipeslider201708162304/img/summer_beach.jpg" alt="">
+					<div class="example-4-text">
+						<div class="mytext">
+							你天生<br>
+							就与众不同<br>
+							为何要随波逐流<br>
+						</div>
+					</div>
+				</li>
+				<li>
+					<img src="http://www.jq22.com/demo/jQuerySwipeslider201708162304/img/lang_yie_ar_kung_fu.jpg" alt="">
+					<div class="example-4-text">
+						<div class="mytext">
+							你天生<br>
+							就与众不同<br>
+							为何要随波逐流2<br>
+						</div>
+					</div>
+				</li>
+				<li>
+					<img src="http://www.jq22.com/demo/jQuerySwipeslider201708162304/img/tiny_vacation.jpg" alt="">
+					<div class="example-4-text">
+						<div class="mytext">
+							你天生<br>
+							就与众不同<br>
+							为何要随波逐流3<br>
+						</div>
+					</div>
+				</li>
+				<li>
+					<img src="http://www.jq22.com/demo/jQuerySwipeslider201708162304/img/borderlands_tiny_tina.jpg" alt="">
+					<div class="example-4-text">
+						<div class="mytext">
+							你天生<br>
+							就与众不同<br>
+							为何要随波逐流4<br>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
 
 	</div>
-	<div class="wrapper example-5">
-
+	<div class="wrapper-5">
+		<div class="example-5">
+			<ul>
+			</ul>
+		</div>
+		
 	</div>
 
 <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
@@ -222,7 +366,7 @@
 <script type="text/javascript">
 	$('.example-1').simpleBanner(
 	{
-		autoPlayDuration:2000,
+		autoPlayDuration:82000,
 		dots:'dots-1',
 		eventType:'mouseenter',
 	});
@@ -239,7 +383,16 @@
 		autoPlayDuration:5000,
 		dots:'dots-3',
 		eventType:'mouseenter',
-		animation:'fade'
+		animation:'fade',
+		resizeHeight:1
+	});
+
+	$('.example-4').simpleBanner(
+	{
+		autoPlayDuration:5000,
+		dots:'dots-4',
+		eventType:'click',
+		animation:'slide'
 	});
 
 

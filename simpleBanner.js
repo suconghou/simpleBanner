@@ -18,7 +18,8 @@
 			autoPlayDuration:5000,
 			eventType:'click',
 			animation:null,
-			onSwitch:null
+			onSwitch:$.noop,
+			resizeHeight:0 // 默认不修改高度
 		};
 		cfg=$.extend(options,cfg);
 		var $ul=this.find('ul');
@@ -30,9 +31,20 @@
 
 		this.css({overflow:'hidden',width:'100%',position:'relative'});
 		$ul.css({width:width,overflow:'hidden',margin:0,zoom:1});
-		$li.css({width:perWidth,float:'left'});
-		$img.css({width:'100%'});
+		$li.css({width:perWidth,height:'100%',float:'left',display:'block'});
+		$img.css({width:'100%',height:'100%',display:'block'});
 
+		if(cfg.resizeHeight==1) // 以最大高度固定，小高度图片可能会变形
+		{
+			$ul.css({height:$ul.height()});
+			$(window).resize(function(){
+				$ul.css({height:'auto'});
+			    setTimeout(function()
+			    {
+					$ul.css({height:$ul.height()});
+			    },0);
+			});
+		}
 		if(cfg.dots)
 		{
 			this.append('<ol class="'+cfg.dots+'"><li class="active"></li>'+repeat('<li></li>',len-1)+'</ol>');
@@ -80,11 +92,18 @@
 
 		function play(current)
 		{
+			if(cfg.resizeHeight==2) // 自适应内容高度，图片大小不一整体高度会切换。
+			{
+				$ul.css('height','auto');
+				var h = $ul.find('li').eq(current).height();
+				$ul.css({'height':h});
+			}
 			animation.play(current);
 			if(cfg.dots)
 			{
 				$ol.find('li').eq(current).addClass('active').siblings().removeClass('active');
 			}
+			cfg.onSwitch($ul,current);
 		}
 		var defaultAnimate=function(current)
 		{
