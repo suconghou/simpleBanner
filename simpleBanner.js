@@ -52,8 +52,7 @@
 
 			$ol.on(cfg.eventType,'li',function()
 			{
-				var $_this=$(this);
-				var current=$_this.index();
+				var current=$(this).index();
 				if(index!=current)
 				{
 					play(current);
@@ -62,19 +61,19 @@
 			});
 		}
 
-		var timer , index=0;
+		var timer,index=len*1e5;
 
 
 		function next()
 		{
-			var current=index++%len;
+			var current=++index%len;
 			play(current);
 		}
 
 		function prev()
 		{
-			var current=index++%len;
-			play(Math.abs(current-2));
+			var current=--index%len;
+			play(current);
 		}
 
 		function autoplay()
@@ -138,6 +137,13 @@
 			autoplay();
 		}
 
+		return {
+			play:play,
+			next:next,
+			prev:prev,
+			pause:stopplay,
+			unpause:autoplay,
+		};
 
 
 	};

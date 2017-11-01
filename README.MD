@@ -26,6 +26,18 @@ set `resizeHeight` to 1 : use maxheight for the container's height
 
 set `resizeHeight` to 2 : reszie the container's height with content
 
+**instance method**
+
+
+| method       		| description 									|
+| ------    		| ----        									|
+| play      		| play the given index pic 						|
+| prev   			| show prev pic 								|
+| next  			| show next pic 								|
+| pause  			| stop autoplay	  								|
+| unpause  			| continue autoplay 						 	|
+
+
 
 ## CSS
 
@@ -119,6 +131,16 @@ css
 ```
 
 **it is useful to set ul li display:none in case of flash**
+
+```
+$('.banner .banner-imgs').simpleBanner(
+{
+    autoPlayDuration:8000,
+    dots:'dots-1',
+    eventType:'mouseenter',
+    animation:'slide'
+});
+```
 
 see index.html for more
 
